@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+  <link rel="stylesheet" href="/styles/pages.css">
+  <title><%= title %></title>
+</head>
+<body>
+  <main>
+    <div class="container-main">
+      <h1><%= heading %></h1>
+      <div class="container mt-5">
+        <div class="row justify-content-center">
+          <div class="col-md-6">
+            <form id="resourceForm">
+              <div class="mb-3">
+                <label for="resourceUrl" class="form-label">Resource URL</label>
+                <input type="url" class="form-control" id="resourceUrl" required>
+              </div>
+              <div class="mb-3">
+                <label for="resourceTitle" class="form-label">Resource Title</label>
+                <input type="text" class="form-control" id="resourceTitle" required>
+              </div>
+              <button type="submit" class="btn btn-custom">Submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <!-- Section with links -->
+      <div class="container mt-5">
+        <div class="row justify-content-center">
+          <div class="col-md-8">
+            <h2>Resources</h2>
+            <ul class="list-unstyled" id="resourceList">
+              <% links.forEach(link => { %>
+                <li><a href="<%= link.url %>" target="_blank"><%= link.text %></a></li>
+              <% }); %>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <%- include("../partials/linked-page-footer.ejs") %>
+  <!-- Include jQuery CDN -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <!-- Include the external JavaScript file -->
+  <script src="/script.js"></script>
+</body>
+</html>

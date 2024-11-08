@@ -1,0 +1,111 @@
+body {
+  background-image: url('/imgs/background-blue.jpg');
+  background-size: cover;
+  background-position: center;
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 1; /* Allow main to take up available space */
+  text-align: center;
+}
+
+.container-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 5% 5%;
+}
+
+h1 {
+  font-size: 3.75rem;
+  color: #66FCF1;
+}
+
+h2 {
+  font-size: 2.35rem;
+  margin: 2.5% 0 5%;
+  color: #45A29e;
+}
+
+.p-main {
+  font-size: 1.2rem;
+  margin: 0 8% 13%;
+  line-height: 2;
+}
+
+.highlight-text {
+  text-transform: uppercase;
+}
+
+.card.custom-transparent-card {
+  background-color: transparent; /* Fully transparent background */
+  border: none; /* No border */
+  color: #45A29e;
+  transition: background-color 0.3s ease, border 0.3s ease;
+  position: relative;
+}
+
+.card.custom-transparent-card .card-body,
+.card.custom-transparent-card .card-img-top {
+  opacity: 0; /* Make content transparent */
+  transition: opacity 0.3s ease;
+}
+
+.card.custom-transparent-card:hover {
+  background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background on hover */
+  border: 1px solid rgba(255, 255, 255, 0.8); /* Border on hover */
+}
+
+.card.custom-transparent-card:hover .card-body,
+.card.custom-transparent-card:hover .card-img-top {
+  opacity: 1; /* Make content visible on hover */
+}
+
+.card.custom-transparent-card:hover .card-title {
+  color: #45A29e; /* Change title color on hover */
+}
+
+.card-title {
+  color: #66FCF1; /* Set initial color */
+  opacity: 1; /* Ensure title is visible initially */
+  position: relative; /* Ensure title is above other content */
+  transition: color 0.3s ease; /* Smooth transition for color change */
+}
+
+.card-img-top {
+  height: 200px;
+  object-fit: cover;
+  width: 100%;
+}
+
+input {
+  appearance: none;
+  -webkit-appearance: none;
+  border: 0;
+  font-size: 0.9rem;
+  background: #c5c6c7;
+  padding: 1rem;
+  color: #1f2833;
+  cursor: pointer;
+}
+
+footer {
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.8); /* Optional: style for better visibility */
+  padding: 0.35rem;
+}

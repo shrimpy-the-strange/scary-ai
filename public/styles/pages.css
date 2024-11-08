@@ -1,0 +1,94 @@
+body {
+    background-image: url('/imgs/background-white.jpg');
+    background-size: cover;
+    background-position: center;
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-variation-settings:
+      "wdth" 100;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  main {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: flex-start;
+    flex: 1; /* Allow main to take up available space */
+    text-align: center;
+  }
+  
+  .container-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .form-container {
+    background: rgba(255, 255, 255, 0.9); 
+    padding: 2rem; 
+    border-radius: 8px; 
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+    margin-top: 3rem;
+  }
+
+  .btn-custom {
+    background-color: #66FCF1; 
+    color: #1f2833; 
+    border: none;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  
+  .btn-custom:hover {
+    background-color: #45A29E;
+  }
+  
+  h1 {
+    
+    font-size: 2.35rem;
+    color: #45A29e;
+    margin-top: 3.5%;
+  }
+  
+  h2 {
+    font-size: 2.35rem;
+    margin: 2.5% 0 5%;
+    color: #686D76;
+  }
+
+  .list-unstyled li a {
+    color: black;
+    text-decoration: none;
+  }
+  
+  .list-unstyled li a:hover {
+    color: #F875AA;
+    text-decoration: underline; 
+  }
+
+  input {
+    appearance: none;
+    -webkit-appearance: none;
+    border: 0;
+    font-size: 0.9rem;
+    background: #c5c6c7;
+    padding: 1rem;
+    color: #1f2833;
+    cursor: pointer;
+  }
+  
+  footer {
+    text-align: center;
+    color: #c5c6c7;
+    background-color: rgba(0, 0, 0, 0.8); 
+    padding: 0.35rem;
+  }
+  
